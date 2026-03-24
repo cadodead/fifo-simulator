@@ -6,8 +6,8 @@ Goal: Generate a 16-character sequence by shuffling the word 4 times.
 let referenceString = ["F", "A", "C", "E"]; 
 let frames = [];
 let frameLimit = 3;
-let referenceSequence = []; // Connecting the shuffle to the logic starts here. March 23rd started here.
-
+let referenceSequence = []; //March 23rd, I added this. Connecting the shuffle to the logic starts here
+let history = []; //March 24th, I wrote this.
 
 for(let i = 0; i < 4; i++){
     // Create a randomized version of the original letters
@@ -38,4 +38,7 @@ referenceSequence.forEach(page => {
         frames.push(page); 
         console.log(page);
     }
+    history.push([...frames]);//
+    console.log(history);
 });
+//Marhc 24th, 2026
