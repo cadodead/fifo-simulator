@@ -6,10 +6,13 @@
 const button = document.querySelector("#runBtn");
 const input = document.querySelector("#referenceInput");
 button.addEventListener("click", () =>{
-    console.log(input.value);
-    console.log("clicked!");
+    let letter = input.value.split("");
+    runSimulation(letter);//What have we accomplished here? We made the string into individual values inside an array
 })
 
 //Session: March 25th, 2026, Goals for an hour session?
 // What needs to replace the referenceString exactly?
 // window.prompt?
+//---
+//Marhc 26th
+
