@@ -47,7 +47,10 @@ Goal: Generate a 16-character sequence by shuffling the word 4 times.
     //Marhc 24th, 2026
     // March 24th, 10:18 pm
     console.log(referenceString);
-    return history;
+    return{
+        history: history,
+        sequence: referenceSequence
+    }
 }
 //March 26th notes below:
 //I console.logged the referenceString inside the function, but nothing happened. I sort of see why but it is hazy in my mind and perhaps it has something to do with DOM manipulation.
