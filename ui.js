@@ -2,10 +2,10 @@ const button = document.querySelector("#runBtn");
 const input = document.querySelector("#referenceInput");
 
 button.addEventListener("click", () =>{
-    let letter = input.value.split("");//Splits the array into individual elements
-    let result = runSimulation(letter);//First is that letter contains the logic of spliiting arrays into individual elements, runSim is a large function that produces arrays of string?
-    let cells = `<th>Memory Page</th>` + result.sequence.map(p => `<th>${p}</th>`).join("");//cells serve as the contianer for individual elements that came from 'result', the logic inside .map says: "each p (page) will turn into a <th>"", honestly idk what it meant by .join("")
-    document.querySelector("#output").innerHTML = `<table border="1"><tr>${cells}</tr></table>`;//we then pass the cells into the "output", and it will display as the shuffled letters aligned into a horizontal line.  
+    let letter = input.value.split("");
+    let result = runSimulation(letter);
+    let cells = `<th>Memory Page</th>` + result.sequence.map(p => `<th>${p}</th>`).join("");
+    document.querySelector("#output").innerHTML = `<table border="1"><tr>${cells}</tr></table>`;  
     
 
     let frame1Row = `<tr><td>1.</td>${result.history.map((step, index) => {
@@ -56,7 +56,6 @@ button.addEventListener("click", () =>{
             return `<td></td>`
         }
     }).join("")}</tr>`
-    document.querySelector("#output").innerHTML = `<table border = "1"><tr>${cells}</tr>${frame1Row} ${frame2Row} ${frame3Row}</table>`;//I tried removing the "<tr>", nothing's change.
+    document.querySelector("#output").innerHTML = `<table border = "1"><tr>${cells}</tr>${frame1Row} ${frame2Row} ${frame3Row}</table>`;
 });
-// Next problem that has risen was the frames missing on table at the end of each Frame
     
