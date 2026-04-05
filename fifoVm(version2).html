@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FIFO Virtual Memory Simulator</title>
+    <link rel="stylesheet" href="fifo.css" />
+  </head>
+  <body>
+    <div class="retro-container">
+
+      <h1>FIFO Simulator</h1>
+
+      <div class="input-row">
+        <!-- Where the user types FACE, DARE, etc. -->
+        <input
+          type="text"
+          id="referenceInput"
+          placeholder="e.g. FACE"
+          maxlength="4"
+        />
+        <!-- Kicks off the simulation -->
+        <button id="runBtn">Run</button>
+      </div>
+
+      <!-- Where the results table appears -->
+      <div id="output"></div>
+
+    </div>
+
+    <!-- fifoVm.js must load first — ui.js depends on it -->
+    <script src="fifoVm.js"></script>
+    <script src="ui.js" defer></script>
+  </body>
+</html>

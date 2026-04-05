@@ -1,0 +1,139 @@
+/* ============================================================
+   style.css — FIFO Virtual Memory Simulator
+   Retro terminal aesthetic, April 2026
+   ============================================================ */
+
+/* 1. Base & Font */
+body {
+  background-color: #9ead86;
+  font-family: 'Courier New', Courier, monospace;
+  color: #33332d;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 2. Main Container */
+.retro-container {
+  border: 4px solid #33332d;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+  background-color: #9ead86;
+  box-shadow: 6px 6px 0px #33332d;
+}
+
+/* 3. Title */
+h1 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+  border-bottom: 3px solid #33332d;
+  padding-bottom: 12px;
+}
+
+/* 4. Input Row */
+.input-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* 5. Input Field */
+#referenceInput {
+  background-color: #b5c2a3;
+  border: 3px solid #33332d;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none;
+  width: 180px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  box-shadow: 3px 3px 0px #33332d;
+}
+
+#referenceInput::placeholder {
+  color: #6b7a5e;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* 6. Run Button */
+#runBtn {
+  background-color: #33332d;
+  color: #9ead86;
+  border: 3px solid #33332d;
+  padding: 10px 24px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #5a5a50;
+  transition: all 0.1s ease;
+}
+
+#runBtn:hover {
+  background-color: #4a4a42;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #5a5a50;
+}
+
+#runBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #5a5a50;
+}
+
+/* 7. Output Area */
+#output {
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+/* 8. Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  border: 2px solid #33332d;
+  padding: 8px 10px;
+  text-align: center;
+  min-width: 36px;
+}
+
+/* Header row */
+th {
+  background-color: #33332d;
+  color: #9ead86;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Frame label cells (1. 2. 3.) */
+tr td:first-child {
+  background-color: #33332d;
+  color: #9ead86;
+  font-weight: bold;
+}
+
+/* Regular data cells */
+td {
+  background-color: #b5c2a3;
+}
+
+/* Asterisk hit cells — stand out */
+td.hit {
+  color: #33332d;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
