@@ -100,6 +100,12 @@ button.addEventListener("click", () => {
     // ── STEP 5: Render the complete table ─────────────────
     // Stitch all rows together and inject into the #output div.
     // innerHTML stamps the HTML string directly onto the page.
+    //April 11th, 2026
+
+let hitCount = result.history.filter(step => step.type === "hit").length;
+let pageCount = result.history.filter(step => step.type === "fault").length;
+//We now need to display this: 
+
     document.querySelector("#output").innerHTML = `
         <table border="1">
             <tr>${cells}</tr>
@@ -107,5 +113,18 @@ button.addEventListener("click", () => {
             ${frame2Row}
             ${frame3Row}
         </table>
-    `;
+        <div class = "pageText">
+            <p>Page Hit:<span style = "color: #fb8545;">${hitCount}</span></p>
+            <p>Page Fault:<span style = "color: #fb8545;">${pageCount}</span></p>
+        </div>
+    `;//New update, April 11th, 2026
 });
+
+//Make a pseudo-code on what we can write tomorrow.
+//The problem at hand: We don't have a PF and PH in order to make one:
+//filter every ("*") && "hit" inside history and display them into the table
+//Else "page", display the total amount.
+//But is there a JS method that counts their total?
+//We can use .lenght for that tomorrow. These comments were written at April 10th, 2026.
+//========================================
+

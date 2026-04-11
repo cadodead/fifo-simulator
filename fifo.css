@@ -8,6 +8,7 @@ body {
   background-color: #9ead86;
   font-family: 'Courier New', Courier, monospace;
   color: #33332d;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   padding: 40px 20px;
@@ -93,23 +94,22 @@ h1 {
 
 /* 7. Output Area */
 #output {
-  margin-top: 8px;
-  overflow-x: auto;
+    overflow-x: auto;  
+    max-width: 100%;
 }
 
 /* 8. Table */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
+    font-size: 1.5rem;  
+    table-layout: fixed;
 }
 
+
 th, td {
-  border: 2px solid #33332d;
-  padding: 8px 10px;
-  text-align: center;
-  min-width: 36px;
+    padding: 5px 7px;    /* tighter padding */
+    min-width: 30px;     /* smaller min width */
 }
+
 
 /* Header row */
 th {
@@ -136,4 +136,12 @@ td.hit {
   color: #33332d;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.pageText {
+  font-size: large;
+    font-weight:bolder;
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
 }
